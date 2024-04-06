@@ -1,0 +1,18 @@
+# Temperature converter
+
+try:
+  your_temperature = float(input("Enter your temperature: "))
+  unit = input("Enter temperature unit (C for Celsius, F for Fahrenheit): ")
+
+
+  if unit == 'c' or unit == 'C':
+    calc_temperature_in_F = round((your_temperature)*1.8 + 32,2)
+    print(f"{your_temperature}°C is equal to {calc_temperature_in_F}°F")
+  elif unit == 'f' or unit == 'F':
+    calc_temperature_in_C = round(((your_temperature) - 32)/1.8,2)
+    print(f"{your_temperature}°F is equal to {calc_temperature_in_C}°C")
+  else:
+    print("Try again. Check your unit input values. Unit should be C or F.")
+
+except Exception as e:
+  print("Unexpected error. Wrong temperature input, exception {e}")
